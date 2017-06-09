@@ -11,7 +11,7 @@ import { Animal } from './animal.model'
   </div>
   <h3>Current Animals</h3>
   <ul>
-     <li *ngFor="let currentAnimal of animals">{{currentAnimal.species}} {{currentAnimal.name}} {{currentAnimal.age}} {{currentAnimal.diet}} {{currentAnimal.location}} {{currentAnimal.caretakers}} {{currentAnimal.sex}} {{currentAnimal.likes}} {{currentAnimal.disklikes}} <button (click)="editAnimal()">Edit!</button> </li>
+     <li *ngFor="let currentAnimal of childAnimalList">{{currentAnimal.species}} {{currentAnimal.name}} {{currentAnimal.age}} {{currentAnimal.diet}} {{currentAnimal.location}} {{currentAnimal.caretakers}} {{currentAnimal.sex}} {{currentAnimal.likes}} {{currentAnimal.disklikes}} <button (click)="editAnimal()">Edit!</button> </li>
   </ul>
   </div>
   `
