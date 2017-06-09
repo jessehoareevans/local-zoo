@@ -41,6 +41,8 @@ _{This application is designed for a zoo to be able to keep track of their anima
   * Refactor minor portion of any redundant work
   * Delete unused code
   * Fill README with any other required information
+  * Add images to animals
+  * Add a way to identify animals by tracking collar
 
 
 ## Known Bugs
