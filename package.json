@@ -45,5 +45,13 @@
   },
   "main": "gulpfile.js",
   "author": "",
-  "description": ""
+  "description": "_{This application is designed for a zoo to be able to keep track of their animals. The user (zoo staff) will be able to add new animals, edit current animals, add some basic information and separate the animals based on their age.}_",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessehoareevans/local-zoo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jessehoareevans/local-zoo/issues"
+  },
+  "homepage": "https://github.com/jessehoareevans/local-zoo#readme"
 }

@@ -9,9 +9,11 @@ import { Animal } from './animal.model';
    <label>Edit the name of the animal</label>
    <input type = "text" [(ngModel)]="childSelectedAnimal.name">
    <label>Edit the age of the animal</label>
-   <input type = "float" [(ngModel)]="childSelectedAnimal.age">
+   <input type = "number" [(ngModel)]="childSelectedAnimal.age">
    <label>Edit how many caretakers are assigned to this animal</label>
-   <input type = "float" [(ngModel)]="childSelectedAnimal.caretakers">
+   <input type = "number" [(ngModel)]="childSelectedAnimal.caretakers">
+   
+   <button (click)="finishedEditing()">Done</button>
   </div>
   `
 })

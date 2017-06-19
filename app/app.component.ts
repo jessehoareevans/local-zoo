@@ -10,15 +10,20 @@ import { Animal } from './animal.model'
   <h1>Local Zoo</h1>
   </div>
   <h3>Current Animals</h3>
-  <ul>
-     <li *ngFor="let currentAnimal of childAnimalList">{{currentAnimal.species}} {{currentAnimal.name}} {{currentAnimal.age}} {{currentAnimal.diet}} {{currentAnimal.location}} {{currentAnimal.caretakers}} {{currentAnimal.sex}} {{currentAnimal.likes}} {{currentAnimal.disklikes}} <button (click)="editAnimal()">Edit!</button> </li>
-  </ul>
+
+  <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
+  <hr>
+  <edit-animal [childSelectedAnimal]="selectedAnimal"(finishedEditingSender)="finishedEditing()"></edit-animal>
+
+  <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
   </div>
   `
 })
 
 export class AppComponent {
+
   masterAnimalList: Animal[] = [
+
     new Animal('Arctic Fox', 'Moon', 2, 'Carnivore', 'Northern Trail', 5, 'Female', 'Cool shade', 'Loud noises'),
 
     new Animal('Ocelot', 'Prince', 4, 'Carnivore', 'Tropical Rain Forest Building', 6, 'Male', 'Laying in the sunshine', 'Toys that are not rope based'),
@@ -30,5 +35,11 @@ export class AppComponent {
 
   editAnimal(currentAnimal) {
     this.selectedAnimal = currentAnimal;
+  }
+  finishedEditing(){
+    this.selectedAnimal = null;
+  }
+  addAnimal(newAnimal: Animal){
+    this.masterAnimalList.push(newAnimal);
   }
 }
